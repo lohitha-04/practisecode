@@ -1,0 +1,38 @@
+* {
+  box-size: border-box;
+  }
+  body {
+  font-family: Arial;
+  margin: 0;
+  }
+  .header {
+  background-color: slateblue;
+  padding: 60px;
+  color: white;
+  text-align:center;
+  text-decoration: none;
+  }
+  .row {
+   display: flex;
+   Flex: 1 0 1;
+  }
+  .menu{
+    flex:30%;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: left;
+  }
+  .main {
+    flex:70%;
+    background-color: lightyellow;
+    padding: 20px;
+  }
+  
+  .footer {
+  background-color: #808080;
+  text-align: center;
+  font-size: 10px;
+  padding:5px;
+  color: white;
+  }
+  
