@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get data</title>
+</head>
+
+<body>
+  <h2>Display Student Data</h2>
+  <button type="button" onclick="loadDoc()">Click here!</button>
+  <p id="demo"></p>
+
+  <script>
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var list = this.responseText;
+          var obj = JSON.parse(list);
+          myfunction();
+        }
+      };
+      xhttp.open("GET", "data.json", true);
+      xhttp.send();
+    }
+
+    function myfunction() {
+      var i;
+      var x = obj.students
+      for (i = 0; i < x.length; i++) {
+        document.getElementById("demo").innerHTML = x[i].sno + " " + x[i].name + " " + x[i].group;
+      }
+    }
+  </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "sno": 1,
+      "name": "Akhila",
+      "group": "ECE"
+    },
+    {
+      "sno": 2,
+      "name": "John",
+      "group": "MBA"
+    },
+    {
+      "sno": 3,
+      "name": "JAya",
+      "group": "MA"
+    },
+    {
+      "sno": 4,
+      "name": "Pooja",
+      "group": "CSE"
+    },
+    {
+      "sno": 5,
+      "name": "Sai",
+      "group": "CA"
+    },
+    {
+      "sno": 6,
+      "name": "Padma",
+      "group": "BSC"
+    }
+  ]
+}
