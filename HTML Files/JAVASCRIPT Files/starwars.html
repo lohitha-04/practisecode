@@ -9,26 +9,58 @@
 
 <body>
   <h2>Display Star war People</h2>
-  <button type="button" onclick="loadDoc()">Click here!</button><br><br>
-  <p id="demo"></p>
+  <button type="button" onclick="loadDoc('http://swapi.dev/api/people/', myFunction1)" ;>Page1</button>
+  <button type="button" onclick="loadDoc('http://swapi.dev/api/people/?page=2', myFunction2)" ;>Page2</button>
+  <button type="button" onclick="loadDoc('http://swapi.dev/api/people/?page=3', myFunction3)" ;>Page3</button><br><br>
+
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
 
   <script>
-    function loadDoc() {
+    function loadDoc(url, cFunction) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          var x = this.responseText;
-          var obj = JSON.parse(x);
-          var i;
-          for (i = 0; i < obj.results.length; i++) {
-            document.getElementById("demo").innerHTML += obj.results[i].name + "<br>";
-          }
+
+          cFunction(this);
         }
       };
-      xhttp.open("GET", "http://swapi.dev/api/people/", true);
+      xhttp.open("GET", url, true);
       xhttp.send();
     }
 
+    function myFunction1(xhttp) {
+      var x = xhttp.responseText;
+      var obj = JSON.parse(x);
+      var i;
+      var list = "";
+      for (i = 0; i < obj.results.length; i++) {
+        list += obj.results[i].name + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = list;
+
+    }
+    function myFunction2(xhttp) {
+      var x = xhttp.responseText;
+      var obj = JSON.parse(x);
+      var i;
+      var list = "";
+      for (i = 0; i < obj.results.length; i++) {
+        list += obj.results[i].name + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = list;
+    }
+    function myFunction3(xhttp) {
+      var x = xhttp.responseText;
+      var obj = JSON.parse(x);
+      var i;
+      var list = "";
+      for (i = 0; i < obj.results.length; i++) {
+        list += obj.results[i].name + "<br>";
+      }
+      document.getElementById("demo3").innerHTML = list;
+    }
   </script>
 
 
