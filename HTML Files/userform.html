@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="view-port" content="width = device-width, initial-scale = 1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="CSS Files/form6.css">
+  <script defer src="JAVASCRIPT Files/form6.js">
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>User Form</h2>
+    <form id="form" onsubmit="return(checkform());" method="POST">
+      <label for="name">Enter your name: </label>
+      <input id="name" type="text" name="name">
+      <span id="msg1"></span>
+      <label for="num">Mobile Number: </label>
+      <input id="num" type="number" name="num">
+      <span id="msg2"></span>
+      <label for="pass1">Enter password: </label>
+      <input id="pass1" type="password" name="pass1">
+      <span id="msg3"></span>
+      <label for="pass2">Confirm Password: </label>
+      <input id="pass2" type="password" name="pass2">
+      <span id="msg4"></span>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+
+  </div>
+</body>
+
+</html>

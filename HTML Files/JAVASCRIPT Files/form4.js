@@ -8,7 +8,7 @@ const pass2 = document.getElementById('pass2').value;
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   myfunction();
-})
+});
 
 function myfunction() {
   if (namevalue === "") {
